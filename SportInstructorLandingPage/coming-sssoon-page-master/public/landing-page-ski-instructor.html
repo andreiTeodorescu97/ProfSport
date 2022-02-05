@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>ProfDeSki</title>
+
+    <link href="asset/css/bootstrap.css" rel="stylesheet" />
+    <link href="asset/css/coming-sssoon.css" rel="stylesheet" />
+
+    <!--     Fonts     -->
+    <link
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Grand+Hotel"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">
+                <i class="fa fa-facebook-square"></i>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-envelope"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+    <div class="main" style="background-image: url('asset/images/ski.jpg')">
+      <!--    Change the image source '/images/restaurant.jpg')" with your favourite image.     -->
+
+      <div class="cover blue" data-color="black"></div>
+
+      <!--   You can change the black color for the filter with those colors: blue, green, red, orange       -->
+
+      <div class="container">
+        <h1 class="logo cursive">ProfDeSki.ro</h1>
+        <!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
+
+        <div class="content">
+          <h4 class="motto">
+            Prima aplicație destinată exclusiv iubitorilor de iarnă.
+          </h4>
+          <div class="subscribe">
+            <h5 class="info-text">
+              Înscrie-te la newsletter pentru a te putea anunță când vom fi
+              gata.
+            </h5>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-4 col-sm6-6 col-sm-offset-3">
+                <form
+                  action="https://formspree.io/f/xrgjejdn"
+                  method="POST"
+                  class="form-inline"
+                  role="form"
+                >
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail2"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control transparent"
+                      placeholder="Email..."
+                      name="_replyto"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-warning btn-fill">
+                    Ține-mă la curent
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="asset/js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script src="asset/js/bootstrap.min.js" type="text/javascript"></script>
+  <!-- Firebase Hosting -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBYOY5VZdiAToxDvpdct8yf_ttx0iU0jGo",
+      authDomain: "profdesport-fa288.firebaseapp.com",
+      projectId: "profdesport-fa288",
+      storageBucket: "profdesport-fa288.appspot.com",
+      messagingSenderId: "585060304991",
+      appId: "1:585060304991:web:7398e251d7f52e89e773ea",
+      measurementId: "G-6MH78GZKBH"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</html>
