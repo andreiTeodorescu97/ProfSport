@@ -27,6 +27,14 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style type="text/css">
+      .g-recaptcha {
+        transform: scale(0.77);
+        -webkit-transform: scale(0.77);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -81,7 +89,7 @@
 
         <div class="content">
           <h4 class="motto">
-            Prima aplicație destinată exclusiv iubitorilor de iarnă.
+            Prima aplicație destinată exclusiv iubitorilor de iarnă si sport.
           </h4>
           <div class="subscribe">
             <h5 class="info-text">
@@ -93,14 +101,14 @@
                 <form
                   action="https://formspree.io/f/xrgjejdn"
                   method="POST"
-                  class="form"
+                  class="form-inline"
                   role="form"
                 >
                   <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail2"
                       >Email address</label
                     >
-                    <div class="g-recaptcha" data-sitekey="6LegVVweAAAAAES8UQqUC6kMlaisJgwX7MNJw-u-"></div>
+
                     <input
                       type="email"
                       class="form-control transparent"
@@ -108,10 +116,19 @@
                       name="_replyto"
                     />
                   </div>
-                  <button type="submit" class="btn btn-warning btn-fill">
+                  <button
+                    type="submit"
+                    class="btn btn-warning btn-fill"
+                    onclick="return callValidation();"
+                  >
                     Ține-mă la curent
                   </button>
                 </form>
+                <br />
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LegVVweAAAAAES8UQqUC6kMlaisJgwX7MNJw-u-"
+                ></div>
               </div>
             </div>
           </div>
@@ -131,7 +148,7 @@
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -141,11 +158,21 @@
       storageBucket: "profdesport-fa288.appspot.com",
       messagingSenderId: "585060304991",
       appId: "1:585060304991:web:7398e251d7f52e89e773ea",
-      measurementId: "G-6MH78GZKBH"
+      measurementId: "G-6MH78GZKBH",
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+  </script>
+
+  <script type="text/javascript">
+    function callValidation() {
+      if (grecaptcha.getResponse().length == 0) {
+        alert("Va rugam bifati casuta reCAPTCHA!");
+        return false;
+      }
+      return true;
+    }
   </script>
 </html>
